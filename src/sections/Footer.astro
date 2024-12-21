@@ -1,0 +1,29 @@
+---
+import Github from "@/assets/github.astro"
+---
+
+<footer>
+  <a
+    target="_blank"
+    href="https://github.com/David-ByHunter"
+    aria-label="Github"
+  >
+  <Github class="icon" />
+  </a>
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    justify-content: center;
+    margin-block: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .icon {
+    color: var(--color-accent);
+  }
+</style>
