@@ -1,0 +1,59 @@
+---
+import Button from "@/components/button.astro";
+interface Props {
+  source: string;
+  title: string;
+  description: string;
+  code?: string;
+  preview?: string;
+}
+
+const { source, title, description, code, preview } = Astro.props as Props;
+---
+
+<section>
+  <img src={source} alt={title} />
+  <div>
+    <h2>{title}</h2>
+    <p>{description}</p>
+    <Button text="Visit" href={preview} />
+  </div>
+</section>
+
+<style>
+  section {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 16px;
+  }
+
+  section > div {
+    display: flex;
+    flex-direction: column;
+    max-width: 648px;
+  }
+
+  img {
+    max-width: 648px;
+    height: fit-content;
+    border-radius: 16px;
+  }
+
+  img:hover {
+    scale: 0.95;
+    transition: all 0.5s ease-in-out;
+  }
+
+  @media screen and (max-width: 768px) {
+    section {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+</style>
