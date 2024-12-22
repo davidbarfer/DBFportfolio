@@ -1,8 +1,10 @@
 ---
 import Project from "@/components/project.astro";
 import { projectESTIEMLGSeville, projectESTIEM } from "@/data/estiem";
+import { projectLinkPage } from "@/data/it";
 import ESTIEMLGSevilleimage from "@/assets/img/project-01.webp";
 import ESTIEMimage from "@/assets/img/project-02.webp";
+import LinkImage from "@/assets/img/project-03.webp";
 ---
 
 <article>
@@ -19,16 +21,25 @@ import ESTIEMimage from "@/assets/img/project-02.webp";
     description={projectESTIEM.description}
     preview={projectESTIEM.preview}
   />
+  <Project
+    source={LinkImage.src}
+    title={projectLinkPage.title}
+    description={projectLinkPage.description}
+    preview={projectLinkPage.preview}
+    code={projectLinkPage.code}
+  />
 </article>
 
 <style>
   article {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 16px;
     margin-inline: 16px;
   }
   h2 {
+    align-self: center;
     text-align: center;
     text-transform: capitalize;
     text-decoration: underline;
