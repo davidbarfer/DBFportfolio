@@ -17,13 +17,13 @@ const { text, href } = Astro.props as Props;
     background-color: var(--color-accent);
     color: var(--color-primary);
     padding: 8px 16px;
+    border: 1px solid transparent;
     border-radius: 8px;
-    border-color: var(--color-accent);
     font-size: 1.25rem;
     cursor: pointer;
     width: fit-content;
   }
-  button:hover {
+  a:hover button {
     color: var(--color-secondary);
     opacity: 0.8;
     transition: all 0.3s ease-in-out;
