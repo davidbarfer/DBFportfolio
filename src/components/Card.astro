@@ -7,13 +7,14 @@ interface Props {
 const { title, description } = Astro.props;
 ---
 
-<div>
+<section>
   <h2>{title}</h2>
   <p>{description}</p>
-</div>
+</section>
 
 <style>
-  div {
+  section {
+    max-width: 1536px;
     display: flex;
     flex-direction: column;
     background-color: var(--color-secondary);
@@ -23,5 +24,9 @@ const { title, description } = Astro.props;
     border-color: var(--color-accent);
     border-width: 2px;
     border-style: solid;
+  }
+
+  h2 {
+    text-transform: capitalize;
   }
 </style>
