@@ -1,0 +1,36 @@
+---
+import Project from "@/components/project.astro";
+import { projectESTIEMLGSeville, projectESTIEM } from "@/data/estiem";
+import ESTIEMLGSevilleimage from "@/assets/img/project-01.webp";
+import ESTIEMimage from "@/assets/img/project-02.webp";
+---
+
+<article>
+  <h2>frontend development</h2>
+  <Project
+    source={ESTIEMLGSevilleimage.src}
+    title={projectESTIEMLGSeville.title}
+    description={projectESTIEMLGSeville.description}
+    preview={projectESTIEMLGSeville.preview}
+  />
+  <Project
+    source={ESTIEMimage.src}
+    title={projectESTIEM.title}
+    description={projectESTIEM.description}
+    preview={projectESTIEM.preview}
+  />
+</article>
+
+<style>
+  article {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-inline: 16px;
+  }
+  h2 {
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: underline;
+  }
+</style>

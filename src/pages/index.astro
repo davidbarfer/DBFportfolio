@@ -1,9 +1,9 @@
 ---
 import Layout from '@/layouts/Layout.astro';
 import Card from '@/components/Card.astro';
+import Projects from '@/sections/projects.astro';
 import { engineer } from '@/data/engineer';
 import { estiem } from '@/data/estiem';
-import { it } from '@/data/it';
 ---
 
 <Layout>
@@ -11,7 +11,7 @@ import { it } from '@/data/it';
 		<h1>David Barrero</h1>
 		<Card title={engineer.title} description={engineer.description} />
 		<Card title={estiem.title} description={estiem.description} />
-		<Card title={it.title} description={it.description} />
+		<Projects />
 	</main>
 </Layout>
 
