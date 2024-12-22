@@ -16,7 +16,10 @@ const { source, title, description, code, preview } = Astro.props as Props;
   <div>
     <h2>{title}</h2>
     <p>{description}</p>
-    <Button text="Visit" href={preview} />
+    <div id="buttons">
+      <Button text="Visit" href={preview} />
+      {code && (<Button text="Code" href={code} />)}
+    </div>
   </div>
 </section>
 
@@ -31,6 +34,11 @@ const { source, title, description, code, preview } = Astro.props as Props;
     display: flex;
     flex-direction: column;
     max-width: 648px;
+  }
+  
+  #buttons {
+    display: flex;
+    gap: 16px;
   }
 
   img {
