@@ -1,14 +1,26 @@
 ---
-import Github from "@/assets/github.astro"
+import Github from "@/assets/github.astro";
+import Linkedin from "@/assets/linkedin.astro";
+import Link from "@/assets/link.astro";
 ---
 
 <footer>
+  <a target="_blank" href="https://davidbarfer.com" aria-label="Website">
+    <Link />
+  </a>
+  <a
+    target="_blank"
+    href="https://www.linkedin.com/in/davidbarfer/"
+    aria-label="Linkedin"
+  >
+    <Linkedin />
+  </a>
   <a
     target="_blank"
     href="https://github.com/David-ByHunter"
     aria-label="Github"
   >
-  <Github class="icon" />
+    <Github />
   </a>
 </footer>
 
@@ -16,6 +28,8 @@ import Github from "@/assets/github.astro"
   footer {
     display: flex;
     justify-content: center;
+    gap: 16px;
+    width: 100%;
     margin-block: 16px;
     position: fixed;
     bottom: 0;
@@ -23,7 +37,12 @@ import Github from "@/assets/github.astro"
     transform: translateX(-50%);
   }
 
-  .icon {
+  a {
+    text-decoration: none;
     color: var(--color-accent);
+  }
+  a:hover {
+    scale: 1.125;
+    opacity: 0.7;
   }
 </style>
