@@ -28,8 +28,27 @@ const { source, title, description, code, preview } = Astro.props as Props;
     display: flex;
     justify-content: space-evenly;
     gap: 16px;
+
+    view-timeline: --section block;
+
+    animation-timeline: --section;
+    animation-name: show;
+    animation-fill-mode: both;
+
+    animation-range: entry 20% cover 50%;
   }
 
+  @keyframes show {
+    from {
+      opacity: 0;
+      scale: 0.25;
+    }
+    to {
+      opacity: 1;
+      scale: 1;
+    }
+  }
+  
   section > div {
     display: flex;
     flex-direction: column;
