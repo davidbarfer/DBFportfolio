@@ -1,0 +1,53 @@
+---
+import { aboutMe } from "@/data/aboutMe"
+import profile from "@/assets/img/profile.webp";
+---
+<section>
+  <div id="profile">
+    <img src={profile.src} alt="Profile Picture" />
+    <h1>David Barrero</h1>
+  </div>
+  <div id="about">
+    <p>{ aboutMe.job01 }</p>
+    <p>{ aboutMe.job02 }</p>
+    <p>{ aboutMe.job03 }</p>
+  </div>
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-inline: 10%;
+  }
+  #profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 16px;
+  }
+  #about {
+    display: flex;
+    column-gap: 8px;
+    flex-wrap: wrap;
+  }
+  p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    background-color: var(--color-accent);
+    color: var(--color-secondary);
+    width: fit-content;
+    padding: 8px;
+    border-radius: 9999999px;
+    font-weight: 900;
+  }
+  img {
+    max-width: 128px;
+    height: fit-content;
+    border-radius: 9999999999999999px;
+  }
+</style>
