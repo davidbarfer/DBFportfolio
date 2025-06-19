@@ -21,5 +21,5 @@ export const projectESTIEM = {
   title: 'ESTIEM',
   description: 'I develop components for the ESTIEM website as a frontend developer. The website is in vue.js and uses bootstrap for styling.',
   src: '@/assets/img/project-02.webp',
-  preview: 'https://estiem.org/'
+  preview: 'https://my.estiem.org/'
 }
